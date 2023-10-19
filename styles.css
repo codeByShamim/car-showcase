@@ -1,0 +1,749 @@
+
+/* Reset default styles for better consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define @font-face rules using variables */
+@font-face {
+    font-family: var(--american-captain-font);
+    src: url('assets/fonts/american-captain/american_captain-webfont.woff2') format('woff2'),
+         url('assets/fonts/american-captain/american_captain-webfont.woff') format('woff');
+    /* Add more font styles and weights if needed */
+}
+
+@font-face {
+    font-family: var(--sf-pro-regular-font);
+    src: url('assets/fonts/sf-pro/sfprodisplayregular-webfont.woff2') format('woff2'),
+         url('assets/fonts/sf-pro/sfprodisplayregular-webfont.woff') format('woff');
+    /* Additional font properties if needed */
+}
+
+/* Font Variables */
+:root {
+    --american-captain-font: 'American Captain';
+    --sf-pro-regular-font: 'SF Pro Display Regular';
+}
+
+
+.background-container {
+    height: 1020px;
+    background-image: url('./assets/image/Background.png'); /* Replace 'your-image.jpg' with the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Keeps the background fixed when scrolling */
+    background-position: center;
+}
+
+/* Rest of your CSS styles here */
+
+
+/* Style for the navbar */
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 100px;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+ /* when site scroll down will nav bac color gray */
+.scrolled {
+    background-color: lightgray;
+    transition: 0.4s;
+}
+
+/* Logo styles */
+.logo {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff; /* Change this to your desired text color */
+    font-size: 24px; /* Adjust the font size as needed */
+    font-family: var(--american-captain-font);
+    font-weight: bold;
+}
+
+/* Navigation styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 2;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+}
+.four-nav-links{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Change this to your desired text color */
+    font-size: 16px; /* Adjust the font size as needed */
+    padding: 0 20px;
+}
+
+.contact-button {
+    padding: 10px;
+    text-align: center;
+    background-color: #ff6600; /* Change this to your desired button color */
+}
+
+/* Mobile menu styles */
+#menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Change this to your desired text color */
+    position: absolute;
+    right: 20px;
+}
+
+/* Header Section */
+.header{
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 100px;
+    max-width: 1920px;
+}
+.header-content{
+    max-width: 500px;
+    text-align: right;
+}
+.header-content h1{
+    color: #FFF;
+    text-align: right;
+    text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+    font-family: var( --american-captain-font);
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+}
+.header-content p{
+display: inline-block;
+width: 50%;
+color: #FFF;
+text-align: right !important;
+font-family: var(--sf-pro-regular-font);
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 30px;
+}
+
+.header-button{
+    color: white;
+    border-radius: 8px;
+    border: 2px solid #FFF;
+    padding: 3px 5px;
+}
+.header-content a{
+    text-decoration: none;
+}
+.arrow-up-right{
+    transform: rotate(-40deg);
+}
+
+/* about us section */
+.about-us {
+    padding: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616; /* Set your desired background color */
+    color: white;
+}
+
+.about-header {
+    text-align: center;
+    width: 100%;
+}
+
+.about-header h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-text {
+    width: 45%;
+}
+
+.content-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.content-image {
+    width: 45%;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles for the benefits section */
+.benefits {
+    background-color: #1a191a;
+    padding: 40px 0;
+    color: white;
+}
+
+.benefits-header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.benefits-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.benefits-header p {
+    font-size: 16px;
+}
+
+.benefits-content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 100px;
+}
+
+/* Card styles for medium screens */
+.card {
+    width: calc(33.33% - 20px); /* Three cards in a row with some spacing */
+    background-color: #fff;
+    color: white;
+    padding: 0 50px 50px 50px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.card:nth-child(1) {
+    background: rgba(0, 221, 168, 0.50); /* Benefit 1 background color */
+}
+
+.card:nth-child(2) {
+    background: rgba(207, 41, 41, 0.60); /* Benefit 2 background color */
+}
+
+.card:nth-child(3) {
+    background: rgba(0, 88, 221, 0.60); /* Benefit 3 background color */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    text-align: center;
+    margin-top: -30px;
+}
+
+.icon img {
+    width: 64px;
+    height: 64px;
+}
+
+.info h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.info p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+
+
+/* Car Showcase Section Header */
+.car-showcase {
+    padding: 20px 100px;
+    background-color: rgb(20, 20, 20);
+    text-align: left;
+    color: white;
+}
+
+.car-section-header h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.car-section-header p {
+    font-size: 16px;
+}
+
+/* Default styles */
+.car-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.item {
+    flex: 0 0 calc(25% - 10px); /* Four items per row with spacing */
+    height: 150px;
+    margin-bottom: 20px; /* Add some vertical spacing between rows */
+    position: relative; /* Add relative positioning */
+    display: flex; /* Center content vertically and horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Add styles for the overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    opacity: 0; /* Initially hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Styles for text and buttons */
+.overlay h3 {
+    font-size: 24px;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.overlay button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none; 
+
+/* Hover effect to show the overlay */
+.item:hover .overlay {
+    opacity: 1;
+}
+  
+
+.item:nth-child(1) {
+ 
+    background-image: url('./assets/image/car-01.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(2) {
+  
+    background-image: url('./assets/image/car-08.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(3) {
+  
+    background-image: url('./assets/image/car-07.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(4) {
+   
+    background-image: url('./assets/image/car-06.jpg'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(5) {
+   
+    background-image: url('./assets/image/car-05.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(6) {
+   
+    background-image: url('./assets/image/car-04.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(7) {
+   
+    background-image: url('./assets/image/car-03.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+.item:nth-child(8) {
+   
+    background-image: url('./assets/image/car-02.png'); /* Replace 'image1.jpg' with the path to your first background image */
+}
+
+
+
+
+
+
+
+
+/* Video Section */
+.video-section {
+    background-color: black;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.video-header {
+    width:100%;
+    padding: 0 100PX;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.video-header h2 {
+    width: 25%;
+    font-size: 28px;
+    margin-bottom: 10px;
+   
+}
+
+.video-header p {
+    width: 30%;
+    font-size: 16px;
+}
+
+
+/* Style for the contact section */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+.contact-header {
+    flex-basis: 45%;
+   
+    padding: 20px;
+}
+
+.contact-header-content {
+    margin: auto;
+}
+
+.contact-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-form {
+    flex-basis: 50%;
+}
+
+/* Style for the form */
+/* Style for the form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+}
+
+/* Style for the input elements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 0; /* Adjust as needed */
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+/* Style for the labels */
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Style for the textarea */
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Remove border-bottom for select element when it's focused */
+select:focus {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 100px;
+    text-align: center;
+}
+
+.footer-logo {
+    flex: 1;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-logo p {
+    font-weight: bold;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-social {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+/* Footer Styles */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(211, 211, 211, 0.233);
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer-bottom-right {
+    margin-left: auto;
+}
+
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+
+   
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        background-color: lightgray;
+        top: 60px; /* Adjust the distance from the top as needed */
+        left: 0;
+        text-align: center;
+    }
+    .four-nav-links{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+  
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-right: 0; /* Reset margin-right for navigation items */
+    }
+
+    .contact-button {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        background-color: #ff6600; /* Change this to your desired button color */
+    }
+
+    /* header  */
+    .header{
+        display: block;
+        padding: 20px;
+    }
+    .header-content{
+        width: 100%;
+        text-align: left;
+        margin-top: 50px;
+    }
+    .header-content h1{
+        text-align: left;
+    }
+    .header-content p{
+        width: 100%;
+        text-align: left !important;
+    }
+
+    /* about us section */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-text,
+    .content-image {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* benefits section */
+    .card {
+        width: 100% !important; /* One card in a row on mobile screens */
+        padding: 0 20px 20px 20px; /* Adjust padding for smaller screens */
+        margin-bottom: 50px;
+    }
+
+    .item {
+        flex: 0 0 calc(50% - 10px); /* Two items per row with spacing */
+    }
+
+    /* video header */
+    .video-header{
+        padding: 50px 20px;
+    }
+    /* footer */
+    .footer-logo, .footer-section, .footer-social {
+        flex: 1 100%;
+        text-align: center;
+    }
+
+    .footer-logo p {
+        font-size: 20px;
+    }
+
+    .footer-section h4 {
+        font-size: 18px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px;
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 992px) {
+    .navbar{
+        padding: 32px 20px;
+    }
+
+    /* benefit section */
+    .benefits-content{
+        width: 100%;
+    }
+    .card {
+        width: calc(50% - 20px); /* Two cards in a row on smaller screens */
+    }
+
+    /* video header */
+    .video-header{
+        flex-direction: column;
+    }
+    .video-header h2{
+        width: 100%;
+    }
+    .video-header p{
+        width: 100%;
+    }
+}
